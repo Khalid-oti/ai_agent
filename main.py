@@ -14,6 +14,6 @@ prompt_tokens = generated_content.usage_metadata.prompt_token_count
 response_tokens = generated_content.usage_metadata.candidates_token_count
 print(response)
 print(
-    f"Prompt Tokens: {prompt_tokens}\
-    Response Tokens: {response_tokens}"
+    f"Prompt tokens: {prompt_tokens}\
+    Response tokens: {response_tokens}"
 )
