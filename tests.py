@@ -2,11 +2,13 @@ from functions.get_files_info import get_files_info
 import unittest
 import os
 
-get_files_info("calculator", ".")
-get_files_info("calculator", "pkg")
-get_files_info("calculator", "/bin")
-get_files_info("calculator", "../")
+def test_files_info_function():
+    print(get_files_info("calculator", "."))
+    print(get_files_info("calculator", "pkg"))
+    print(get_files_info("calculator", "/bin"))
+    print(get_files_info("calculator", "../"))
 
+test_files_info_function()
 
 
 #class FileInfoTest(unittest.TestCase):
