@@ -24,3 +24,4 @@ def get_files_info(working_directory, directory=None):
         except Exception as e:
             return f"Error: {e}"
         files_info += f"- {file}: file_size={size}, is_dir={type}\n"
+    return files_info
