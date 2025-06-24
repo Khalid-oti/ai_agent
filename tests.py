@@ -3,6 +3,7 @@ import unittest
 import os
 
 def test_files_info_function():
+    print(get_files_info("calculator", None))
     print(get_files_info("calculator", "."))
     print(get_files_info("calculator", "pkg"))
     print(get_files_info("calculator", "/bin"))
