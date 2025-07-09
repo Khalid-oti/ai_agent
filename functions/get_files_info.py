@@ -12,17 +12,17 @@ def get_files_info(working_directory, directory=None):
         return f'Error: "{directory}" is not a directory'
     
     try:
-        files_info = ""
+        files_info = []
         dir_contents = os.listdir(directory_path)
         for content in dir_contents:
             content_path = os.path.join(directory_path, content)
             size = os.path.getsize(content_path)
             dir_or_not = os.path.isdir(content_path)
-            files_info += f"- {content}: file_size={size}, is_dir={dir_or_not}\n"
+            files_info.append(f"- {content}: file_size={size}, is_dir={dir_or_not}")
     except Exception as e:
         return f"Error: {e}"
 
-    return files_info
+    return "\n".join(files_info)
 
 schema_get_files_info = types.FunctionDeclaration(
     name="get_files_info",
